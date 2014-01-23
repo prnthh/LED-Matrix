@@ -1,4 +1,4 @@
-String msg="lights will guide you home     ";
+String msg="insert text here";
 int i=0;
 int flag=0;
 byte copy[]={B0000000};
@@ -57,11 +57,11 @@ byte F[7]={
   B10000,
   B10000};
 byte G[7]={
-  B11110,
+  B01110,
   B10000,
   B10110,
   B10010,
-  B11110};
+  B01100};
 byte H[7]={
   B10010,
   B10010,
@@ -129,11 +129,11 @@ byte R[7]={
   B10100,
   B10010};
 byte S[7]={
-  B11110,
+  B01110,
   B10000,
-  B11110,
+  B01100,
   B00010,
-  B11110};
+  B11100};
 byte T[7]={      //6
   B111110,
   B001000,
@@ -209,7 +209,7 @@ byte four[7]={       //6
 byte five[7]={
   B11110,
   B10000,
-  B01100,
+  B11100,
   B00010,
   B11100};
 byte six[7]={
@@ -272,8 +272,6 @@ byte comma[7]={
   B000,
   B000,
   B000,
-  B000,
-  B010,
   B010,
   B100};
 byte questionMark[7]={
@@ -289,14 +287,10 @@ byte fullStop[7]={
   B0,
   B0,
   B0,
-  B0,
-  B0,
   B1};
 byte apostrophe[7]={
   B010,
-  B010,
   B100,
-  B000,
   B000,
   B000,
   B000};
@@ -320,30 +314,22 @@ byte exclamation[7]={
   B10,
   B10,
   B10,
-  B10,
-  B10,
   B00,
   B10};
 byte colon[7]={
   B000,
   B110,
-  B110,
   B000,
-  B110,
   B110,
   B000};
 byte semicolon[7]={
   B000,
   B110,
-  B110,
   B000,
-  B110,
   B110,
   B010};
 byte openingCurvedBracket[7]={
   B010,
-  B100,
-  B100,
   B100,
   B100,
   B100,
@@ -353,13 +339,9 @@ byte  closingCurvedBracket[7]={
   B010,
   B010,
   B010,
-  B010,
-  B010,
   B100};
 byte openingSquareBracket[7]={
   B110,
-  B100,
-  B100,
   B100,
   B100,
   B100,
@@ -369,16 +351,12 @@ byte closingSquareBracket[7]={
   B010,
   B010,
   B010,
-  B010,
-  B010,
   B110};
 byte equals[7]={
   B00000,
-  B00000,
   B11110,
   B00000,
   B11110,
-  B00000,
   B00000};
 byte plus[7]={
   B000000,
@@ -391,14 +369,10 @@ byte plus[7]={
 byte hyphen[7]={
   B0000,
   B0000,
-  B0000,
   B1110,
-  B0000,
   B0000,
   B0000};
 byte underscore[7]={
-  B000000,
-  B000000,
   B000000,
   B000000,
   B000000,
@@ -408,8 +382,6 @@ byte star[7]={
   B0100,
   B1110,
   B0100,
-  B1010,
-  B0000,
   B0000,
   B0000};
 byte symbolAnd[7]={
@@ -423,8 +395,6 @@ byte symbolAnd[7]={
 byte raisedTo[7]={
   B0100,
   B1010,
-  B1010,
-  B0000,
   B0000,
   B0000,
   B0000};
@@ -438,11 +408,9 @@ byte percentage[7]={
   B10001110};
 byte similarTo[7]={
   B000000,
-  B000000,
   B010010,
   B101010,
   B100100,
-  B000000,
   B000000};
 /*byte hashTag1[7]={
   B00000000,
@@ -488,7 +456,7 @@ void show(byte*image, int len)
   for(int pix=len-1;pix>=0;pix--)
   {
     unsigned long start = millis();
-    while(start + 100 > millis())
+    while(start + 120 > millis())
     {
     for(int row=0;row<5;row++)
     {
@@ -570,7 +538,7 @@ void loop()
     else if(letter=='r')
     show(R,5);
     else if(letter=='s')
-    show(S,6);
+    show(S,5);
     else if(letter=='t')
     show(T,6);
     else if(letter=='u')
@@ -668,3 +636,4 @@ void loop()
   for(int i=0;i<14;i++)
   show(space,1);
 }
+
